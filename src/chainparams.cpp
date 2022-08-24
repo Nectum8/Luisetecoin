@@ -52,7 +52,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "Sometimes you hit the jackpot and sometimes the jackpot hits you";
+    const char* pszTimestamp = "Si vienes a campa, estas basicamente muerto";
     const CScript genesisOutputScript = CScript() << ParseHex("0478505c5bc438e08c0c8de26a661bc5a4453378d0b149fbf17cb3e1499b1d3e552fe5faaa253673c5349b461bd964a2ee860c114e9d2b9fdb0328f37ed356ed54") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -196,7 +196,7 @@ public:
         consensus.vUpgrades[Consensus::UPGRADE_TIME_PROTOCOL_V2].nActivationHeight       = 1641;
         consensus.vUpgrades[Consensus::UPGRADE_P2PKH_BLOCK_SIGNATURES].nActivationHeight = 1741;
         consensus.vUpgrades[Consensus::UPGRADE_STAKE_MIN_DEPTH_V2].nActivationHeight     = 5001;
-        consensus.vUpgrades[Consensus::UPGRADE_MASTERNODE_RANK_V2].nActivationHeight     = 5001;
+        consensus.vUpgrades[Consensus::UPGRADE_MASTERNODE_RANK_V2].nActivationHeight     = 115000;
 
         consensus.vUpgrades[Consensus::UPGRADE_POS].hashActivationBlock                    = uint256S("0x0");
         consensus.vUpgrades[Consensus::UPGRADE_POS_V2].hashActivationBlock                 = uint256S("0x0");
@@ -218,10 +218,10 @@ public:
         pchMessageStart[3] = 0x77;
         nDefaultPort = __PORT_MAINNET__;
 
-        vSeeds.push_back(CDNSSeedData("seeder", "seeder.__decenomy.net__"));
-	    vSeeds.push_back(CDNSSeedData("seed1", "seed1.__decenomy.net__"));
-        vSeeds.push_back(CDNSSeedData("seed2", "seed2.__decenomy.net__"));
-        vSeeds.push_back(CDNSSeedData("seed3", "seed3.__decenomy.net__"));
+        vSeeds.push_back(CDNSSeedData("seeder", "185.207.104.251"));
+	    vSeeds.push_back(CDNSSeedData("seed1", "185.194.141.200"));
+        vSeeds.push_back(CDNSSeedData("seed2", "5.45.107.126"));
+        vSeeds.push_back(CDNSSeedData("seed3", "188.68.42.79"));
         vSeeds.push_back(CDNSSeedData("seed4", "seed4.__decenomy.net__"));
 	    vSeeds.push_back(CDNSSeedData("seed5", "seed5.__decenomy.net__"));
 	    vSeeds.push_back(CDNSSeedData("seed6", "seed6.__decenomy.net__"));
