@@ -1,16 +1,16 @@
 #!/bin/bash
 
 TMP_FOLDER=$(mktemp -d)
-CONFIG_FILE='__decenomy__.conf'
-CONFIGFOLDER='/root/.__decenomy__'
-COIN_DAEMON='__decenomy__d'
-COIN_CLI='__decenomy__-cli'
+CONFIG_FILE='luisetecoin.conf'
+CONFIGFOLDER='/root/.luisetecoin'
+COIN_DAEMON='luisetecoind'
+COIN_CLI='luisetecoin-cli'
 COIN_PATH='/usr/local/bin/'
 COIN_TGZ=`curl -s https://api.github.com/repos/__GITHUB_ACCOUNT__/__GITHUB_REPOSITORY__/releases/latest | grep "browser_download_url.*Linux\\.zip" | cut -d : -f 2,3 | tr -d \" | xargs`
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
-COIN_NAME='__decenomy__'
-COIN_PORT=__PORT_MAINNET__
-RPC_PORT=__RPCPORT_MAINNET__
+COIN_NAME='Luisete Coin'
+COIN_PORT=2244
+RPC_PORT=4422
 
 BLUE="\033[0;34m"
 YELLOW="\033[0;33m"
@@ -151,6 +151,14 @@ masternodeprivkey=$COINKEY
 
 
 
+# ADDNODES:
+addnode=185.207.104.251
+addnode=185.194.141.200
+addnode=5.45.107.126
+addnode=188.68.42.79
+addnode=5.45.99.114
+addnode=185.207.105.46
+addnode=46.38.253.212
 
 EOF
 }
