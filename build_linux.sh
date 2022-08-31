@@ -29,6 +29,6 @@ fi
 	cd ..
 
 # Create zip file of binaries
-	cp DSW/src/__decenomy__d DSW/src/__decenomy__-cli DSW/src/__decenomy__-tx DSW/src/qt/__decenomy__-qt .
-	zip __DSW__-$(git describe --abbrev=0 --tags | sed s/v//)-Linux.zip __decenomy__d __decenomy__-cli __decenomy__-tx __decenomy__-qt
-	rm -f __decenomy__d __decenomy__-cli __decenomy__-tx __decenomy__-qt
+	cp DSW/src/luisetecoind DSW/src/luisetecoin-cli DSW/src/luisetecoin-tx DSW/src/qt/luisetecoin-qt .
+	zip luisetecoin-$(git describe --abbrev=0 --tags | sed s/v//)-Linux.zip luisetecoind luisetecoin-cli luisetecoin-tx luisetecoin-qt
+	rm -f luisetecoind luisetecoin-cli luisetecoin-tx luisetecoin-qt
